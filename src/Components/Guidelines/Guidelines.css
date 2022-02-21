@@ -5,17 +5,17 @@
   position: relative;
   padding-top: 2vh;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .guidelines-heading {
   text-align: left;
   font-family: "Poppins", sans-serif;
   color: white;
-  margin: 12vh 5vh 5vh 10vh;
+  margin: 0 5vh 1vh 10vh;
   font-size: 4.7rem;
 }
-.guidelines{
+.guidelines {
   max-width: 100vw;
   position: relative;
 }
@@ -34,13 +34,21 @@
 .guidelines-container img {
   position: absolute;
   top: -70px;
-  right: 8%;
+  right: 5%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .guidelines-container {
+    min-height: 90vh;
+  }
 }
 
 @media only screen and (max-width: 1025px) {
+  .guidelines-container img {
+    display: none;
+  }
+
   .guidelines-heading {
-    padding-top: 6vh;
-    padding-left: 5vh;
     font-size: 2.5rem;
     padding-bottom: 3vh;
   }
@@ -51,18 +59,66 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .points {
+    width: 90%;
+    padding-left: 6 vh;
+    font-size: 1.2rem;
+  }
+  .guidelines-container {
+    min-height: 100vh;
+  }
+}
+
 @media only screen and (max-width: 700px) {
-  .guidelines-container img {
-    visibility: hidden;
+  .guidelines-container {
+    min-height: 105vh;
   }
   .guidelines-heading {
-    padding-left: 6vh;
-    margin-bottom: -1vh;
     font-size: 2.5rem;
+    margin: 0 5vh 5vh 7vh;
   }
   .points {
     width: 90%;
-    padding-left: 7vh;
+    padding-left: 5vh;
     font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .points {
+    width: 90%;
+    padding-left: 3vh;
+    font-size: 1.2rem;
+  }
+  .guidelines-container {
+    min-height: 120vh;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .points {
+    width: 90%;
+    padding-left: 3vh;
+    font-size: 1rem;
+  }
+  .guidelines-container {
+    padding: 0 0 10rem 0;
+    min-height: 120vh;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .guidelines-heading {
+    font-size: 2rem;
+    margin: 0 1rem;
+  }
+  .points {
+    width: 90%;
+    padding-left: 3vh;
+    font-size: 0.9rem;
+  }
+  .guidelines-container {
+    padding: 0 0 10rem 0;
+    min-height: 120vh;
   }
 }
