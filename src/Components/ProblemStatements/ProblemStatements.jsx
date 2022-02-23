@@ -71,15 +71,15 @@ function ProblemStatements() {
           <h1
             className="main-heading"
             id="tabview"
-            data-content="ProblemStatement"
+            data-content="ProblemStatements"
           >
-            ProblemStatement
+            ProblemStatements
           </h1>
           <h1 className="main-heading" id="mobview" data-content="Problem">
             Problem
           </h1>
-          <h1 className="main-heading" id="mobview" data-content="Statement">
-            Statement
+          <h1 className="main-heading" id="mobview" data-content="Statements">
+            Statements
           </h1>
         </HeadingNav>
         <StatementCard />

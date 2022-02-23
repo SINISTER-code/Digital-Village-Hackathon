@@ -1,9 +1,10 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "./speakers.css";
 import "swiper/css";
+import "./speakers.css";
+import React from "react";
 import grid from "./dots.png";
 import styled from "@emotion/styled";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Speakers from "../../data/speakers.js";
 
 const SpeakersWrapper = styled.div`
   background-color: #072227;
@@ -119,8 +120,8 @@ function SwiperCarousel() {
   return (
     <SpeakersWrapper>
       <TitleDiv>
-        <h1 className="main-heading" data-content="Speakers">
-          Speakers
+        <h1 className="main-heading" data-content="Judges">
+          Judges
         </h1>
       </TitleDiv>
       <CarouselDiv>
@@ -154,23 +155,16 @@ function SwiperCarousel() {
           // onSlideChange={() => console.log("slide change")}
           // onSwiper={(swiper) => console.log(swiper)}
         >
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <SwiperSlide key={item}>
+          {Speakers.map((speaker) => (
+            <SwiperSlide key={speaker.key}>
               <SpeakerCard>
                 <PictureDiv>
                   <GridImage src={grid} alt="" />
-                  <SpeakerImg
-                    src={"https://picsum.photos/400/300"}
-                    alt={"Speaker-1 image"}
-                  />
+                  <SpeakerImg src={speaker.img} alt={"Speaker image"} />
                 </PictureDiv>
                 <SpeakerBody>
-                  <SpeakerName>Speaker Name</SpeakerName>
-                  <SpeakerDes>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi sed elit quam. Nulla rhoncus euismod dolor elementum
-                    eleifend.
-                  </SpeakerDes>
+                  <SpeakerName>{speaker.name}</SpeakerName>
+                  <SpeakerDes>{speaker.des}</SpeakerDes>
                 </SpeakerBody>
               </SpeakerCard>
             </SwiperSlide>
