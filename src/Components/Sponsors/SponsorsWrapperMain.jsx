@@ -2,6 +2,12 @@ import React from "react";
 import spn from "./img.png";
 import Sponsors from "../../data/sponsors.js";
 import styled from "@emotion/styled";
+import { Row, Col } from "react-bootstrap";
+import devfolio from "../../images/devfolio.png";
+import polygon from "../../images/polygon.png";
+import tezos from "../../images/tezos.png";
+import celo from "../../images/celo.png";
+import filecoin from "../../images/filecoin.png";
 
 const SponsorsWrapper = styled.div`
   background-color: black;
@@ -75,6 +81,10 @@ const SponsorsCard = styled.div`
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#C8C8C8", endColorstr="#444444", GradientType=1 );
 `;
 
+const Img = styled.img`
+  cursor: pointer;
+`;
+
 function SponsorsWrapperMain() {
   return (
     <SponsorsWrapper id="sponsors">
@@ -90,9 +100,58 @@ function SponsorsWrapperMain() {
           </h1>
         </TitleDiv>
       </SponsorHeading>
-      <SponsorsCard>
-        {/* {Sponsors.map((sponsor, index) => ())} */}
-      </SponsorsCard>
+      <div className="sponsors-div">
+        <Row>
+          <h2 className="main-heading" data-content="Title Sponsors">
+            Title Sponsors
+          </h2>
+          <Col>
+            <Img
+              src={devfolio}
+              onClick={() => {
+                window.location.href = "https://devfolio.co";
+              }}
+            />
+          </Col>
+          <Col>
+            <Img
+              src={polygon}
+              onClick={() => {
+                window.location.href = "https://polygon.technology/";
+              }}
+            />
+          </Col>
+        </Row>
+        <Row>
+          <h2 className="main-heading" data-content="Power Sponsors">
+            Power Sponsors
+          </h2>
+          <Col>
+            <Img
+              src={tezos}
+              onClick={() => {
+                window.location.href = "https://tezos.com";
+              }}
+            />
+          </Col>
+          <Col>
+            <Img
+              src={celo}
+              onClick={() => {
+                window.location.href = "https://celo.org ";
+              }}
+            />
+          </Col>
+          <Col>
+            <Img
+              src={filecoin}
+              onClick={() => {
+                window.location.href = "https://filecoin.io ";
+              }}
+            />
+          </Col>
+        </Row>
+      </div>
     </SponsorsWrapper>
   );
 }

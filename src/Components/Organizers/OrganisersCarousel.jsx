@@ -1,15 +1,14 @@
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./speakers.css";
 import React from "react";
 import grid from "./dots.png";
 import styled from "@emotion/styled";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper";
-import Speakers from "./speakers.js";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Organisers from "./organisers.js";
 
-const SpeakersWrapper = styled.div`
+const OrganisersWrapper = styled.div`
   background-color: #072227;
   padding-bottom: 10vh;
 `;
@@ -31,7 +30,7 @@ const CarouselDiv = styled.div`
   }
 `;
 
-const SpeakerCard = styled.div`
+const OrganiserCard = styled.div`
   // height: 40vh;
   background-color: black;
   font-size: 1.2rem;
@@ -43,7 +42,7 @@ const SpeakerCard = styled.div`
   }
 `;
 
-const SpeakerImg = styled.img`
+const OrganiserImg = styled.img`
   display: block;
   height: 17vw;
   @media (max-width: 1300px) {
@@ -57,16 +56,16 @@ const SpeakerImg = styled.img`
   }
 `;
 
-const SpeakerBody = styled.div`
+const OrganiserBody = styled.div`
   padding: 2rem;
 `;
 
-const SpeakerName = styled.h5`
+const OrganiserName = styled.h5`
   font-size: 2rem;
   padding-bottom: 2vh;
 `;
 
-const SpeakerDes = styled.p`
+const OrganiserDes = styled.p`
   font-size: 1.2rem;
 `;
 
@@ -119,12 +118,12 @@ const TitleDiv = styled.div`
   margin-bottom: 2.5rem;
 `;
 
-function SwiperCarousel() {
+function OrganisersCarousel() {
   return (
-    <SpeakersWrapper id="judges">
+    <OrganisersWrapper id="organisers">
       <TitleDiv>
-        <h1 className="main-heading" data-content="Judges">
-          Judges
+        <h1 className="main-heading" data-content="Organisers">
+          Organisers
         </h1>
       </TitleDiv>
       <CarouselDiv>
@@ -132,8 +131,8 @@ function SwiperCarousel() {
           spaceBetween={40}
           slidesPerView={3}
           scrollbar={{ draggable: true }}
-          pagination={{ clickable: true }}
           navigation={true}
+          pagination={{ clickable: true }}
           modules={[Autoplay, Navigation, Pagination]}
           autoplay={{
             delay: 2500,
@@ -165,24 +164,24 @@ function SwiperCarousel() {
           // onSlideChange={() => console.log("slide change")}
           // onSwiper={(swiper) => console.log(swiper)}
         >
-          {Speakers.map((speaker) => (
-            <SwiperSlide key={speaker.key}>
-              <SpeakerCard>
+          {Organisers.map((Organiser) => (
+            <SwiperSlide key={Organiser.key}>
+              <OrganiserCard>
                 <PictureDiv>
                   <GridImage src={grid} alt="" />
-                  <SpeakerImg src={speaker.img} alt={"Speaker image"} />
+                  <OrganiserImg src={Organiser.img} alt={"Organiser image"} />
                 </PictureDiv>
-                <SpeakerBody>
-                  <SpeakerName>{speaker.name}</SpeakerName>
-                  <SpeakerDes>{speaker.des}</SpeakerDes>
-                </SpeakerBody>
-              </SpeakerCard>
+                <OrganiserBody>
+                  <OrganiserName>{Organiser.name}</OrganiserName>
+                  {/* <OrganiserDes>{Organiser.des}</OrganiserDes> */}
+                </OrganiserBody>
+              </OrganiserCard>
             </SwiperSlide>
           ))}
         </Swiper>
       </CarouselDiv>
-    </SpeakersWrapper>
+    </OrganisersWrapper>
   );
 }
 
-export default SwiperCarousel;
+export default OrganisersCarousel;

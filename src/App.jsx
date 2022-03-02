@@ -4,8 +4,10 @@ import Landing from "./Components/Landing/Landing";
 // import Speakers from "./Components/Speakers/Speakers";
 import LogoSection from "./Components/LogoNav/LogoSection";
 import SwiperCarousel from "./Components/Speakers/SwiperCarousel";
+import OrganisersCarousel from "./Components/Organizers/OrganisersCarousel";
 import ProblemStatements from "./Components/ProblemStatements/ProblemStatements";
 import SponsorsWrapperMain from "./Components/Sponsors/SponsorsWrapperMain";
+import Prizes from "./Components/Prizes/Prizes";
 import Footer from "./Components/Footer/Footer";
 import styled from "@emotion/styled";
 import "./app.css";
@@ -40,6 +42,8 @@ function App() {
       <ProblemStatements />
       <SponsorsWrapperMain />
       {/* <Speakers /> */}
+      <OrganisersCarousel />
+      <Prizes />
       <SwiperCarousel />
       <Footer />
     </div>
