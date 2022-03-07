@@ -8,6 +8,10 @@ import polygon from "../../images/polygon.png";
 import tezos from "../../images/tezos.png";
 import celo from "../../images/celo.png";
 import filecoin from "../../images/filecoin.png";
+import gmc from "../../images/gmc.png";
+import gdsc_bu from "../../images/gdsc_bu.png";
+import taskade from "../../images/taskade.png";
+import wb from "../../images/wb.png";
 import "./sponsors.css";
 
 const SponsorsWrapper = styled.div`
@@ -27,21 +31,6 @@ const TitleDiv = styled.div`
     justify-content: center;
   }
 `;
-
-// const Title = styled.h1`
-//   background-color: #282a31;
-//   padding: 2.5rem 5rem;
-//   color: #08bd04;
-//   font-size: 3rem;
-//   font-weight: bold;
-//   letter-spacing: 0.2rem;
-//   text-shadow: 2px 2px white;
-
-//   @media (max-width: 850px) {
-//     background-color: inherit;
-//     width: 100%;
-//   }
-// `;
 
 const SponsorSVG = styled.img`
   display: none;
@@ -103,51 +92,144 @@ function SponsorsWrapperMain() {
       </SponsorHeading>
       <div className="sponsors-div">
         <Row>
-          <h2 className="spHeading main-heading" data-content="Title Sponsors">
+          <h2 className="subheading" id="desktop" data-content="Title Sponsors">
             Title Sponsors
           </h2>
-          <Col>
+          <h2 className="subheading" id="mobile" data-content="Title">
+            Title
+          </h2>
+          <h2 className="subheading mobile" id="mobile" data-content="Sponsors">
+            Sponsors
+          </h2>
+          <Col xs={12} sm={6} md={4}>
             <Img
               src={devfolio}
               onClick={() => {
                 window.location.href = "https://devfolio.co";
               }}
+              style={{ height: "100px", width: "400px" }}
             />
           </Col>
-          <Col>
+          <Col xs={12} sm={6} md={4}>
             <Img
               src={polygon}
               onClick={() => {
                 window.location.href = "https://polygon.technology/";
               }}
+              style={{ height: "100px", width: "400px" }}
+            />
+          </Col>
+          <Col xs={12} sm={6} md={4}>
+            <Img
+              src={wb}
+              onClick={() => {
+                window.location.href = "https://wandb.ai/site";
+              }}
+              style={{ height: "100px", width: "400px" }}
             />
           </Col>
         </Row>
         <Row>
-          <h2 className="spHeading main-heading " data-content="Power Sponsors">
+          <h2
+            className="subheading desktop"
+            id="desktop"
+            data-content="Power Sponsors"
+          >
             Power Sponsors
           </h2>
-          <Col>
+          <h2 className="subheading" id="mobile" data-content="Power">
+            Power
+          </h2>
+          <h2 className="subheading" id="mobile" data-content="Sponsors">
+            Sponsors
+          </h2>
+          <Col xs={12} sm={6} md={4}>
             <Img
               src={tezos}
               onClick={() => {
                 window.location.href = "https://tezos.com";
               }}
+              style={{ height: "100px", width: "250px" }}
             />
           </Col>
-          <Col>
+          <Col xs={12} sm={6} md={4}>
             <Img
               src={celo}
               onClick={() => {
                 window.location.href = "https://celo.org ";
               }}
+              style={{ height: "100px", width: "250px" }}
             />
           </Col>
-          <Col>
+          <Col xs={12} sm={6} md={4}>
             <Img
               src={filecoin}
               onClick={() => {
                 window.location.href = "https://filecoin.io ";
+              }}
+              style={{ height: "100px", width: "250px" }}
+            />
+          </Col>
+        </Row>
+        <Row>
+          <h2
+            className="subheading desktop"
+            id="desktop"
+            data-content="Associate Sponsors"
+          >
+            Associate Sponsors
+          </h2>
+          <h2 className="subheading" id="mobile" data-content="Associate">
+            Associate
+          </h2>
+          <h2 className="subheading" id="mobile" data-content="Sponsors">
+            Sponsors
+          </h2>
+          <Col>
+            <Img
+              src={gmc}
+              onClick={() => {
+                window.location.href = "https://givemycertificate.com";
+              }}
+              style={{
+                height: "150px",
+                width: "450px",
+                transform: "scale(1.5)",
+              }}
+            />
+          </Col>
+          <Col>
+            <Img
+              src={taskade}
+              onClick={() => {
+                window.location.href = "https://www.taskade.com";
+              }}
+              style={{ height: "150px", width: "450px" }}
+            />
+          </Col>
+        </Row>
+        <Row>
+          <h2
+            className="subheading desktop"
+            id="desktop"
+            data-content="Outreach"
+          >
+            Outreach
+          </h2>
+          <h2 className="subheading" id="mobile" data-content="Outreach">
+            Outreach
+          </h2>
+          <Col>
+            <Img
+              src={gdsc_bu}
+              height={200}
+              onClick={() => {
+                window.location.href =
+                  "https://gdsc.community.dev/bennett-university-greater-noida/";
+              }}
+              style={{
+                height: "250px",
+                width: "550px",
               }}
             />
           </Col>
